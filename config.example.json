@@ -1,0 +1,53 @@
+{
+  "ha_url": "http://homeassistant.local:8123",
+  "ha_token_file": "/opt/ha_token",
+  "terminus_url": "http://127.0.0.1:2301",
+  "terminus_login": "renderer@example.com",
+  "terminus_password_file": "/opt/terminus_renderer_pw",
+  "timezone": "America/Denver",
+  "model_id": 12,
+  "playlist_id": 1,
+  "house": {
+    "thermostat": "climate.thermostat",
+    "indoor_temp": "sensor.thermostat_temperature",
+    "indoor_humidity": "sensor.thermostat_humidity",
+    "garage": [
+      { "label": "Double door", "entity": "cover.garage_double_door" },
+      { "label": "Single door", "entity": "cover.garage_single_door" }
+    ],
+    "radon": {
+      "entity": "sensor.radon_1_day_average",
+      "longterm": "sensor.radon_longterm_average"
+    },
+    "extras": [
+      { "label": "Bedroom", "entity": "sensor.bedroom_temperature", "kind": "temp" },
+      { "label": "Basement leak", "entity": "binary_sensor.basement_leak", "kind": "leak" }
+    ]
+  },
+  "solar": {
+    "power": "sensor.inverter_power",
+    "max_w": 15000,
+    "stale_after_s": 300,
+    "energy_total_kwh": "sensor.inverter_energy_total_kwh",
+    "usage_power": "sensor.home_power",
+    "usage_daily_wh": "sensor.home_daily_energy"
+  },
+  "weather": {
+    "entity": "weather.home",
+    "temp": "sensor.tempest_temperature",
+    "feels_like": "sensor.tempest_feels_like",
+    "humidity": "sensor.tempest_humidity",
+    "wind": "sensor.tempest_wind_speed_average",
+    "tempest_station_id": 123456,
+    "tempest_token_file": "/opt/tempest_token",
+    "wind_obs": "sensor.tempest_wind_speed_average",
+    "gust_obs": "sensor.tempest_wind_gust"
+  },
+  "display": {
+    "port": 2302,
+    "upstream": "http://127.0.0.1:2301",
+    "rotation": ["weather", "house", "solar"],
+    "button_margin_s": 60,
+    "page_refresh_s": 300
+  }
+}
