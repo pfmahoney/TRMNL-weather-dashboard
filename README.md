@@ -45,3 +45,7 @@ Temperatures are shown in both °C and °F.
 
 `state.json`, `screens.json` and `display_state.json` are created at runtime. Delete
 `display_state.json` to reset the proxy's page tracking.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
