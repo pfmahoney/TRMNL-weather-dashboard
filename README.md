@@ -4,6 +4,11 @@ Home Assistant pages for a [TRMNL](https://usetrmnl.com) OG e-ink display runnin
 self-hosted [Terminus](https://github.com/usetrmnl/byos_hanami) server. Plain Python 3 standard
 library, no dependencies.
 
+The key thing that makes this interesting is the weather icon and format which is a bit different from others. 
+Additionally the integration with Tempest for the weather is a bit different than others out there.   There are
+other pages added - like a house page and a solar generation and house usage graph which could be useful as
+templates for others.
+
 Three 800×480 pages:
 
 - **Weather** (home page): current conditions from a local Tempest station via Home Assistant,
